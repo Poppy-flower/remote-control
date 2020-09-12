@@ -1,0 +1,30 @@
+{
+  "name": "remote-control",
+  "version": "1.0.0",
+  "description": "这个是跟着极客时间 electron 学习的第二章的demo，远程控制",
+  "main": "app/main/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run start:render\" \"wait-on http://localhost:3000 && npm run start:main\" ",
+    "start:main": "electron .",
+    "start:render": "cd app/renderer/src/main && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Poppy-flower/remote-control.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Poppy-flower/remote-control/issues"
+  },
+  "homepage": "https://github.com/Poppy-flower/remote-control#readme",
+  "dependencies": {
+    "electron": "^10.1.1",
+    "electron-is-dev": "^1.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "wait-on": "^5.2.0"
+  }
+}
