@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import {ipcRenderer} from 'electron';
+import {ipcRenderer} from 'electron'; // import正常不支持，需要解决一下
 
 function App() {
   return (
